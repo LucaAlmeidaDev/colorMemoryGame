@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Color Memory</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css" integrity="sha512-OQDNdI5rpnZ0BRhhJc+btbbtnxaj+LdQFeh0V9/igiEPDiWE2fG+ZsXl0JEH+bjXKPJ3zcXqNyP4/F/NegVdZg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <header>
+        <nav class="flex justify-between m-10">
+            <div id="menu" class="w-14 h-14 bg-slate-200 flex items-center justify-center text-2xl cursor-pointer rounded-xl shadow-xl transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 hover:bg-slate-500 duration-300 hover:text-white "><i class="ri-menu-line"></i></div>
+            <div id="dropDown" class="w-56 h-96 bg-slate-200 rounded-xl shadow-xl fixed">
+                <div class="flex justify-between text-2xl m-2"><btn><i class="ri-menu-line"></i></btn><btn><i class="ri-close-circle-fill"></i></btn></div>
+                <div class="flex justify-between text-4xl m-8"><a><i class="ri-github-fill"></i></a><a><i class="ri-linkedin-box-fill"></i></a><a><i class="ri-instagram-fill"></i></a></div>
+                <div class="text-sd m-5 bottom-0 absolute">Created by Lucas Almeida</div>
+            </div>
+            <h1 class="text-4xl">Color Memory</h1>  
+            <div onclick="darkMode" class="w-14 h-14 bg-slate-200 flex items-center justify-center text-2xl cursor-pointer rounded-xl shadow-xl transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 hover:bg-slate-500 duration-300 hover:text-white"><i id="sun" class="ri-sun-fill"></i><i id="moon" class="ri-moon-fill"></i></div>
+        </nav>
+    </header>
+
+   <div class="flex flex-col">
+    <div class="flex items-center justify-center flex-col w-80 h-80 rounded-full bg-slate-200 mx-auto ">
+        <div class="flex">
+            <div class="cursor-pointer" id="red"></div>
+            <div class="cursor-pointer" id="green"></div>
+        </div>
+        <div class="flex ">
+            <div class="cursor-pointer" id="yellow"></div>
+            <div class="cursor-pointer" id="blue"></div>
+        </div>
+    </div>
+
+    <div class="w-36 h-14 bg-slate-200 flex m-auto items-center justify-center text-2xl cursor-pointer rounded-xl shadow-xl mt-14 transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 hover:bg-slate-500 duration-300 hover:text-white"><p>Start</p></div>
+   </div>
+    
+    
+    <footer class="absolute bottom-0 text-2xl">
+        <div class="flex ">
+                <h1>Score: 00</h1>
+                <h1>Best: 00</h1>
+        </div>
+    </footer>
+
+
+    <script src='script.js'></script>
+</body>
+</html>

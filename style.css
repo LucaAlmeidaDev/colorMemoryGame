@@ -1,0 +1,70 @@
+:root{
+    --gray: #ddd;
+    --background: #fff;
+    --text: #000;
+}
+body{
+    background-color: var(--background);
+    transition: background-color 0.6s ease;
+}
+#sun{
+    display: flex;
+}
+#moon{
+    display: none;
+}
+#menu{  
+    display: flex;
+}
+#box1{
+    width: 200px;
+    height: 200px;
+    background-color: black;
+    border-radius: 15px;
+}
+#box2{
+    width: 200px;
+    height: 200px;
+    background-color: black;
+    border-radius: 15px;
+}
+#box3{
+    width: 200px;
+    height: 200px;
+    background-color: black;
+    border-radius: 15px;
+}
+#box4{
+    width: 200px;
+    height: 200px;
+    background-color: black;
+    border-radius: 15px;
+}
+#green{
+    width: 0;
+    height: 0;
+    border-right: 150px solid #6ee7b7;
+    border-bottom: 150px solid #6ee7b7;
+    border-radius: 20%;
+}
+#red {
+    width: 0;
+    height: 0;
+    border-top: 150px solid #fca5a5;
+    border-right: 150px solid #fca5a5;
+    border-radius: 20%;
+}
+#blue{
+    width: 0;
+    height: 0;
+    border-left: 150px solid #7dd3fc;
+    border-bottom: 150px solid #7dd3fc;
+    border-radius: 20%;
+}
+#yellow{
+    width: 0;
+    height: 0;
+    border-right: 150px solid #fcd34d;
+    border-bottom: 150px solid #fcd34d;
+    border-radius: 20%;
+}
