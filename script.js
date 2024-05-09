@@ -1,23 +1,29 @@
+var darkModeButton = document.getElementById('darkModeButton')
 
+var sun = document.getElementById('sun')
+var moon = document.getElementById('moon')
 
-
-
-function darkMode(){
-    const sunIcon = document.getElementById('sun')
-    const moonIcon = document.getElementById('moon')
-
-    if(darkMode) {
-        moonIcon.style.display('block')
-        sunIcon.style.display('none')
-        document.documentElement.style.setProperty('--background','#171717');
-        document.documentElement.style.setProperty('--gray','#000000');
-        document.documentElement.style.setProperty('--text','#FFFFFF');
-    }
-    else{
-        moonIcon.style.display('none')
-        sunIcon.style.display('block')
-        document.documentElement.style.setProperty('--background','#FFFFFF');
-        document.documentElement.style.setProperty('--gray','#DDDDDD');     
-        document.documentElement.style.setProperty('--text','#000000');
+darkModeButton.onclick = function(){
+    document.body.classList.toggle('dark-theme');
+    if(document.body.classList.contains('dark-theme')){
+        sun.style.display = 'none';
+        moon.style.display = 'block';
+    }else{
+        sun.style.display = 'block';
+        moon.style.display = 'none';
     }
 }
+
+var menu = document.getElementById('menu')
+var dropDown = document.getElementById('dropDown')
+var dropDownBtn = document.getElementById('dropDown-btn')
+ 
+
+menu.onclick = function(){
+    menu.style.display = 'none';
+    dropDown.style.display = 'block';
+}
+dropDownBtn.onclick = function(){
+    menu.style.display = 'block';
+    dropDown.style.display = 'none';
+}   

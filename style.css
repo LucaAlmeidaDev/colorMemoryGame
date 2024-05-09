@@ -1,11 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 :root{
     --gray: #ddd;
+    --circle: #000;
     --background: #fff;
     --text: #000;
 }
+.dark-theme{
+    --gray: #ddd;
+    --circle: #ddd;
+    --background: #171717;
+    --text: #fff;
+}
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: inherit;
+}   
 body{
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
     background-color: var(--background);
-    transition: background-color 0.6s ease;
+    transition: all 0.6s ease;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    margin: 2.5rem;
+}
+.menu{
+    display: flex;
+    justify-content: end;
+    font-size: 20px;
+    margin: 8px;
+}
+#dropDown-btn{
+    cursor: pointer;
+}
+#dropDown-btn:hover{
+    color: #fca5a5;
+    transform: translateY(0.25rem);
+    transform: scale(1.4);
+    transition: all 0.3s;
+}
+
+.dropDown{
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: var(--gray);
+    position: fixed;
+    width: 256px;
+    height: 384px ;
+    display: none;
+}
+.social{
+    display: flex;
+    justify-content: space-between;
+    font-size: 36px;
+    margin: 30px;
+}
+.social a{
+    cursor: pointer;
+}
+.social a:hover{
+    color: #fca5a5;
+    transform: translateY(0.25rem);
+    transform: scale(1.4);
+    transition: all 0.3s;
+}
+.credits{
+    margin: 20px;
+    bottom: 0;
+    position: absolute;
+    font-size: 0.875rem; 
+    line-height: 1.25rem; 
+    text-align: center;
+}
+.logo{
+    font-size: 40px;
+    font-weight: 300;
+    color: var(--text);
+}
+.btn{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    border-radius: 20px;
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: var(--gray);
+}
+.btn:hover{
+    transform: translateY(0.25rem);
+    transform: scale(1.1);
+    transition: all 0.3s;
+    animation-duration: 0.5s;
 }
 #sun{
     display: flex;
@@ -16,36 +109,13 @@ body{
 #menu{  
     display: flex;
 }
-#box1{
-    width: 200px;
-    height: 200px;
-    background-color: black;
-    border-radius: 15px;
-}
-#box2{
-    width: 200px;
-    height: 200px;
-    background-color: black;
-    border-radius: 15px;
-}
-#box3{
-    width: 200px;
-    height: 200px;
-    background-color: black;
-    border-radius: 15px;
-}
-#box4{
-    width: 200px;
-    height: 200px;
-    background-color: black;
-    border-radius: 15px;
-}
 #green{
     width: 0;
     height: 0;
     border-right: 150px solid #6ee7b7;
     border-bottom: 150px solid #6ee7b7;
     border-radius: 20%;
+    cursor: pointer;
 }
 #red {
     width: 0;
@@ -67,4 +137,60 @@ body{
     border-right: 150px solid #fcd34d;
     border-bottom: 150px solid #fcd34d;
     border-radius: 20%;
+}
+.game-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 50%;
+    width: 320px;
+    height: 320px;
+    background-color: var(--circle);
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+}
+.line{
+    display: flex;
+}
+.start{
+    width: 300px;
+    height: 60px;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: all 0.3s;
+    background-color: var(--gray);
+    color: #000;
+    font-size: 40px;
+    font-weight: 300;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.start:hover{
+    transform: translateY(0.25rem);
+    transform: scale(1.1);
+}
+footer{
+    display: flex;
+    justify-content: space-between;
+}
+.footer-holder{
+    display: flex;
+}
+.footer-holder h1{
+    color: var(--text);
+    font-weight: 300;
+    font-size: 24px;
+}
+#score{
+    display: flex;
+    text-align: left;
+}
+#best{
+    display: flex;
+    text-align: right;
 }
