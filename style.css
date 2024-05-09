@@ -1,15 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 :root{
     --gray: #ddd;
-    --circle: #000;
+    --black: #000;
     --background: #fff;
     --text: #000;
 }
 .dark-theme{
     --gray: #ddd;
-    --circle: #ddd;
+    --black: #ddd;
     --background: #171717;
     --text: #fff;
+}
+@media only screen and (max-width: 680px){
+    nav .logo{
+        font-size: 30px;
+    }
 }
 *{
     padding:0;
@@ -25,9 +31,9 @@ body{
     transition: all 0.6s ease;
 }
 nav{
-    display: flex;
-    justify-content: space-between;
+    display: flex;      
     margin: 2.5rem;
+    text-align: center;
 }
 .menu{
     display: flex;
@@ -44,45 +50,55 @@ nav{
     transform: scale(1.4);
     transition: all 0.3s;
 }
-
 .dropDown{
     border-radius: 20px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    background-color: var(--gray);
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+    background-color: var(--black);
     position: fixed;
     width: 256px;
     height: 384px ;
     display: none;
+    color: var(--background);
 }
 .social{
     display: flex;
     justify-content: space-between;
     font-size: 36px;
-    margin: 30px;
+    margin: 80px 30px 20px 30px;
 }
 .social a{
     cursor: pointer;
 }
 .social a:hover{
-    color: #fca5a5;
+    color: #7dd3fc;
     transform: translateY(0.25rem);
     transform: scale(1.4);
     transition: all 0.3s;
 }
+.portifolio-link{
+    cursor: pointer;
+}
+.portifolio-link:hover{    
+    color: #7dd3fc;
+    transform: translateY(0.25rem);
+    transform: scale(1.2);
+    transition: all 0.3s;
+}
 .credits{
-    margin: 20px;
-    bottom: 0;
-    position: absolute;
+    margin-top: 120px;
     font-size: 0.875rem; 
     line-height: 1.25rem; 
     text-align: center;
+    color: var(--background);
 }
 .logo{
+    margin: auto;
     font-size: 40px;
     font-weight: 300;
     color: var(--text);
 }
 .btn{
+    color: var(--background);
     width: 50px;
     height: 50px;
     display: flex;
@@ -92,7 +108,7 @@ nav{
     align-items: center;
     cursor: pointer;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    background-color: var(--gray);
+    background-color: var(--black);
 }
 .btn:hover{
     transform: translateY(0.25rem);
@@ -146,7 +162,7 @@ nav{
     border-radius: 50%;
     width: 320px;
     height: 320px;
-    background-color: var(--circle);
+    background-color: var(--black);
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 40px;
@@ -156,7 +172,7 @@ nav{
 }
 .start{
     width: 300px;
-    height: 60px;
+    height: 50px;
     display: flex;
     margin: auto;
     justify-content: center;
@@ -164,8 +180,8 @@ nav{
     cursor: pointer;
     border-radius: 20px;
     transition: all 0.3s;
-    background-color: var(--gray);
-    color: #000;
+    background-color: var(--black);
+    color: var(--background);
     font-size: 40px;
     font-weight: 300;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -175,11 +191,13 @@ nav{
     transform: scale(1.1);
 }
 footer{
+    margin: 0 2.5rem 0 2.5rem;
     display: flex;
     justify-content: space-between;
 }
 .footer-holder{
     display: flex;
+    margin-top: 80px;
 }
 .footer-holder h1{
     color: var(--text);

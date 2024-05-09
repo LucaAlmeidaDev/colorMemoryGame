@@ -17,6 +17,7 @@ darkModeButton.onclick = function(){
 var menu = document.getElementById('menu')
 var dropDown = document.getElementById('dropDown')
 var dropDownBtn = document.getElementById('dropDown-btn')
+var logo = document.getElementById('logo')
  
 
 menu.onclick = function(){
