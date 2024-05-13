@@ -7,10 +7,10 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css" integrity="sha512-OQDNdI5rpnZ0BRhhJc+btbbtnxaj+LdQFeh0V9/igiEPDiWE2fG+ZsXl0JEH+bjXKPJ3zcXqNyP4/F/NegVdZg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
 </head>
 <body>
     <header>
+        <audio src="" id="bAudio"></audio>
         <nav>
             <div id="menu" class="btn"><i class="ri-menu-line"></i></div>
             <div id="dropDown" class="dropDown">
@@ -19,13 +19,26 @@
                 <div class="portifolio-link"><btn>Visit my Portifolio<i class="ri-external-link-line"></i></btn></div>
                 <div class="credits">Created by Lucas Almeida</div>
             </div>
-            <h1 class="logo" id="logo">Color Memory</h1>  
-            <btn onclick="DarkModeButton()" id="darkModeButton" class="btn"><i id="sun" class="ri-sun-fill"></i><i id="moon" class="ri-moon-fill"></i></btn>
+            <div style="display: flex;">
+                <h1 class="logo" id="logo">Color Memory Game</h1>  
+                <div style="margin: 10px 0 0 8px;">
+                    <div class="line">
+                        <div id="red1"></div>
+                        <div id="green1"></div>
+                    </div>
+                    <div class="line">
+                        <div id="yellow1"></div>
+                        <div id="blue1"></div>
+                    </div>  
+                </div>
+               
+            </div>
+      
         </nav>
     </header>
 
    <div>
-    <div class="game-container">
+    <div id="gameContainer" class="game-container">
         <div class="line">
             <div id="red"></div>
             <div id="green"></div>
@@ -33,19 +46,26 @@
         <div class="line">
             <div id="yellow"></div>
             <div id="blue"></div>
-        </div>
+        </div>  
     </div>
-
-    <div class="start"><p>Start</p></div>
+    <div class="start" id="start"><p>Start</p></div>        
    </div>
     
     
     <footer>
         <div class="footer-holder">
-                <h1 id="score">Score: 00</h1>
+            <div>
+                <h1>Score: </h1>
+                <h1 id="score">00</h1>
+            </div>
+             
         </div>
         <div class="footer-holder">
-            <h1 id="best">Best: 00</h1>
+            <div>
+                <h1>Best: </h1>
+                <h1 id="best">00</h1>
+            </div>
+     
         </div>
     </footer>
 

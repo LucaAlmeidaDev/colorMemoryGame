@@ -2,15 +2,17 @@
 
 :root{
     --gray: #ddd;
-    --black: #000;
-    --background: #fff;
-    --text: #000;
-}
-.dark-theme{
-    --gray: #ddd;
     --black: #ddd;
     --background: #171717;
     --text: #fff;
+    --red: #DC4A4A;
+    --red-highlight: #fa6868;
+    --green: #34BE67;
+    --green-highlight: #92EBB3;
+    --yellow: #CBAD38;
+    --yellow-highlight: #FCE073;
+    --blue: #3B7AC9;    
+    --blue-highlight: #A0C9FC;
 }
 @media only screen and (max-width: 680px){
     nav .logo{
@@ -23,6 +25,7 @@
     box-sizing: border-box;
     text-decoration: none;
     color: inherit;
+    user-select: none;
 }   
 body{
     font-family: "Poppins", sans-serif;
@@ -34,6 +37,7 @@ nav{
     display: flex;      
     margin: 2.5rem;
     text-align: center;
+    justify-content: space-between;
 }
 .menu{
     display: flex;
@@ -92,7 +96,6 @@ nav{
     color: var(--background);
 }
 .logo{
-    margin: auto;
     font-size: 40px;
     font-weight: 300;
     color: var(--text);
@@ -116,11 +119,9 @@ nav{
     transition: all 0.3s;
     animation-duration: 0.5s;
 }
-#sun{
-    display: flex;
-}
-#moon{
-    display: none;
+#menu i{
+    text-align: center;
+    line-height: 50px;
 }
 #menu{  
     display: flex;
@@ -128,30 +129,57 @@ nav{
 #green{
     width: 0;
     height: 0;
-    border-right: 150px solid #6ee7b7;
-    border-bottom: 150px solid #6ee7b7;
+    border-right: 150px solid var(--green);
+    border-bottom: 150px solid var(--green);
     border-radius: 20%;
-    cursor: pointer;
+}
+#green1{
+    width: 0;
+    height: 0;
+    border-right: 20px solid var(--green);
+    border-bottom: 20px solid var(--green);
+    border-radius: 20%;
 }
 #red {
     width: 0;
     height: 0;
-    border-top: 150px solid #fca5a5;
-    border-right: 150px solid #fca5a5;
+    border-top: 150px solid var(--red);
+    border-right: 150px solid var(--red);
+    border-radius: 20%;
+}
+#red1{
+    width: 0;
+    height: 0;
+    border-right: 20px solid var(--red);
+    border-bottom: 20px solid var(--red);
     border-radius: 20%;
 }
 #blue{
     width: 0;
     height: 0;
-    border-left: 150px solid #7dd3fc;
-    border-bottom: 150px solid #7dd3fc;
+    border-left: 150px solid var(--blue);
+    border-bottom: 150px solid var(--blue);
+    border-radius: 20%;
+}
+#blue1{
+    width: 0;
+    height: 0;
+    border-right: 20px solid var(--blue);
+    border-bottom: 20px solid var(--blue);
     border-radius: 20%;
 }
 #yellow{
     width: 0;
     height: 0;
-    border-right: 150px solid #fcd34d;
-    border-bottom: 150px solid #fcd34d;
+    border-right: 150px solid var(--yellow);
+    border-bottom: 150px solid  var(--yellow);
+    border-radius: 20%;
+}
+#yellow1{   
+    width: 0;
+    height: 0;
+    border-right: 20px solid var(--yellow);
+    border-bottom: 20px solid var(--yellow);
     border-radius: 20%;
 }
 .game-container{
@@ -160,8 +188,9 @@ nav{
     align-items: center;
     flex-direction: column;
     border-radius: 50%;
-    width: 320px;
-    height: 320px;
+    border: solid 20px;
+    width: 420px;
+    height: 420px;
     background-color: var(--black);
     margin-left: auto;
     margin-right: auto;
@@ -175,8 +204,6 @@ nav{
     height: 50px;
     display: flex;
     margin: auto;
-    justify-content: center;
-    align-items: center;
     cursor: pointer;
     border-radius: 20px;
     transition: all 0.3s;
@@ -185,6 +212,11 @@ nav{
     font-size: 40px;
     font-weight: 300;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.start p{
+    text-align: center;
+    margin: auto;
+    line-height: 50px;
 }
 .start:hover{
     transform: translateY(0.25rem);
@@ -198,6 +230,9 @@ footer{
 .footer-holder{
     display: flex;
     margin-top: 80px;
+}
+.footer-holder div{
+    display: flex;
 }
 .footer-holder h1{
     color: var(--text);
