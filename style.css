@@ -126,6 +126,10 @@ nav{
 #menu{  
     display: flex;
 }
+.heroContainer{
+    display: flex;
+
+}
 #green{
     width: 0;
     height: 0;
@@ -182,7 +186,13 @@ nav{
     border-bottom: 20px solid var(--yellow);
     border-radius: 20%;
 }
+.textContainer{
+    display: flex;
+    flex-direction: column;
+    margin: 150px 0 0 50px;
+}
 .game-container{
+    margin: 0 0 40px 450px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -192,9 +202,7 @@ nav{
     width: 420px;
     height: 420px;
     background-color: var(--black);
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 40px;
+    box-shadow: 0 0 1000px 80px transparent;
 }
 .line{
     display: flex;
@@ -222,28 +230,12 @@ nav{
     transform: translateY(0.25rem);
     transform: scale(1.1);
 }
-footer{
-    margin: 0 2.5rem 0 2.5rem;
-    display: flex;
-    justify-content: space-between;
-}
-.footer-holder{
-    display: flex;
-    margin-top: 80px;
-}
 .footer-holder div{
     display: flex;
+    gap: 7px;
 }
 .footer-holder h1{
     color: var(--text);
-    font-weight: 300;
+    font-weight: 600;
     font-size: 24px;
-}
-#score{
-    display: flex;
-    text-align: left;
-}
-#best{
-    display: flex;
-    text-align: right;
 }

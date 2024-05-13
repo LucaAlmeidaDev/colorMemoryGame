@@ -25,6 +25,7 @@ let best = 0;
 let start = document.getElementById('start');
 let stopGame = document.getElementById('stop');
 let green = document.getElementById('green');
+let bblur = document.getElementById('blur')
 let blue = document.getElementById('blue');
 let red = document.getElementById('red');
 let yellow = document.getElementById('yellow');
@@ -75,10 +76,13 @@ function endGame(){
     document.documentElement.style.setProperty('--red', '#DC4A4A');
     document.documentElement.style.setProperty('--yellow', '#CBAD38');
     document.documentElement.style.setProperty('--blue', '#3B7AC9');
+    gameContainer.style.border = 'solid 20px transparent'
+    start.style.pointerEvents = 'all';
+    gameContainer.style.boxShadow = '0 0 700px 50px transparent';
     start.style.backgroundColor = '#ddd';
     start.style.color = '#171717';
     start.style.cursor = 'pointer';
-    start.style.boxShadow = 'rgba(0, 0, 0, 0.24) 0px 3px 8px'
+    start.style.boxShadow = 'rgba(0, 0, 0, 0.24) 0px 3px 8px';
     if(score > best){
         updateBest(best = score);
     }   
@@ -117,7 +121,8 @@ function startGame(){
         console.log('green')
         green.style.cursor = 'pointer'
         document.documentElement.style.setProperty('--green', '#92EBB3');
-        gameContainer.style.border = 'solid 20px #92EBB3'
+        gameContainer.style.border = 'solid 20px #92EBB3';
+        gameContainer.style.boxShadow = '0 0 700px 50px #92EBB3';
         gAudio.play();
         green.onclick = () => handleClickCorrect()
         red.onclick = () =>  handleClickIncorrect()
@@ -129,6 +134,7 @@ function startGame(){
         blue.style.cursor = 'pointer'
         document.documentElement.style.setProperty('--blue', '#A0C9FC');
         gameContainer.style.border = 'solid 20px #A0C9FC'
+        gameContainer.style.boxShadow = '0 0 700px 50px #A0C9FC';
         bAudio.play();
         blue.onclick = () => handleClickCorrect()
         red.onclick = () =>  handleClickIncorrect()
@@ -140,6 +146,7 @@ function startGame(){
         red.style.cursor = 'pointer'
         document.documentElement.style.setProperty('--red', '#fa6868');
         gameContainer.style.border = 'solid 20px #fa6868'
+        gameContainer.style.boxShadow = '0 0 700px 50px #fa6868';
         rAudio.play();
         red.onclick = () => handleClickCorrect()
         green.onclick = () =>  handleClickIncorrect()
@@ -151,6 +158,7 @@ function startGame(){
         yellow.style.cursor = 'pointer'
         document.documentElement.style.setProperty('--yellow', '#FCE073');
         gameContainer.style.border = 'solid 20px #FCE073'
+        gameContainer.style.boxShadow = '0 0 700px 50px #FCE073';
         yAudio.play();
         yellow.onclick = () => handleClickCorrect()
         red.onclick = () =>  handleClickIncorrect()
