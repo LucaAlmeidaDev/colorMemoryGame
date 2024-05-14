@@ -52,19 +52,51 @@ function updateBest(newBest) {
     score = newBest;
     document.getElementById('best').innerHTML = best.toString().padStart(2, '0');
 }
-
+function greenCorrect(){
+    console.log('green')
+    green.style.cursor = 'pointer'
+    document.documentElement.style.setProperty('--green', '#92EBB3');
+    gameContainer.style.border = 'solid 20px #92EBB3';
+    gameContainer.style.boxShadow = '0 0 700px 50px #92EBB3';
+    gAudio.play();
+}
+function blueCorrect(){
+    console.log('blue')
+    blue.style.cursor = 'pointer'
+    document.documentElement.style.setProperty('--blue', '#A0C9FC');
+    gameContainer.style.border = 'solid 20px #A0C9FC'
+    gameContainer.style.boxShadow = '0 0 700px 50px #A0C9FC';
+    bAudio.play();
+}
+function redCorrect(){
+    console.log('red')
+    red.style.cursor = 'pointer'
+    document.documentElement.style.setProperty('--red', '#fa6868');
+    gameContainer.style.border = 'solid 20px #fa6868'
+    gameContainer.style.boxShadow = '0 0 700px 50px #fa6868';
+    rAudio.play();
+}
+function yellowCorrect(){
+    console.log('yellow')
+    yellow.style.cursor = 'pointer'
+    document.documentElement.style.setProperty('--yellow', '#FCE073');
+    gameContainer.style.border = 'solid 20px #FCE073'
+    gameContainer.style.boxShadow = '0 0 700px 50px #FCE073';
+    yAudio.play();
+}
 function handleClickCorrect(){
     document.documentElement.style.setProperty('--green', '#34BE67');
     document.documentElement.style.setProperty('--red', '#DC4A4A');
     document.documentElement.style.setProperty('--yellow', '#CBAD38');
     document.documentElement.style.setProperty('--blue', '#3B7AC9');
-    handleContinueGame();       
+    handleContinueGame();
     updateScore(score + 1);
 }
 function handleClickIncorrect(){
     endGame();
 }
 function handleContinueGame(){
+    randomColors()
     startGame()
 }
 function endGame(){
@@ -104,11 +136,13 @@ start.onclick = function buttonStart(){
     start.style.pointerEvents = 'none'
     startGame();
 }
-
 function randomColors(){
     let random = Math.floor(Math.random() * 4);
     const colorsArray = ['green', 'blue', 'red', 'yellow']
     colors = colorsArray[random];
+}   
+function randomSequence(){
+    randomColors()
 }
 function newSequence(){
     const newColor = randomColors(); 
@@ -118,48 +152,28 @@ function newSequence(){
 function startGame(){
     randomColors(); 
     if( colors === 'green'){
-        console.log('green')
-        green.style.cursor = 'pointer'
-        document.documentElement.style.setProperty('--green', '#92EBB3');
-        gameContainer.style.border = 'solid 20px #92EBB3';
-        gameContainer.style.boxShadow = '0 0 700px 50px #92EBB3';
-        gAudio.play();
-        green.onclick = () => handleClickCorrect()
-        red.onclick = () =>  handleClickIncorrect()
-        yellow.onclick = () => handleClickIncorrect()
-        blue.onclick = () => handleClickIncorrect()
+        greenCorrect();
+        green.onclick = () => handleClickCorrect();
+        red.onclick = () =>  handleClickIncorrect();
+        yellow.onclick = () => handleClickIncorrect();
+        blue.onclick = () => handleClickIncorrect();
     }
     else if( colors === 'blue'){
-        console.log('blue')
-        blue.style.cursor = 'pointer'
-        document.documentElement.style.setProperty('--blue', '#A0C9FC');
-        gameContainer.style.border = 'solid 20px #A0C9FC'
-        gameContainer.style.boxShadow = '0 0 700px 50px #A0C9FC';
-        bAudio.play();
+        blueCorrect();
         blue.onclick = () => handleClickCorrect()
         red.onclick = () =>  handleClickIncorrect()
         yellow.onclick = () => handleClickIncorrect()
         green.onclick = () => handleClickIncorrect()
     }
     else if( colors === 'red'){
-        console.log('red')
-        red.style.cursor = 'pointer'
-        document.documentElement.style.setProperty('--red', '#fa6868');
-        gameContainer.style.border = 'solid 20px #fa6868'
-        gameContainer.style.boxShadow = '0 0 700px 50px #fa6868';
-        rAudio.play();
+        redCorrect();
         red.onclick = () => handleClickCorrect()
         green.onclick = () =>  handleClickIncorrect()
         yellow.onclick = () => handleClickIncorrect()
         blue.onclick = () => handleClickIncorrect()
     }
     else if( colors === 'yellow'){
-        console.log('yellow')
-        yellow.style.cursor = 'pointer'
-        document.documentElement.style.setProperty('--yellow', '#FCE073');
-        gameContainer.style.border = 'solid 20px #FCE073'
-        gameContainer.style.boxShadow = '0 0 700px 50px #FCE073';
-        yAudio.play();
+        yellowCorrect();
         yellow.onclick = () => handleClickCorrect()
         red.onclick = () =>  handleClickIncorrect()
         green.onclick = () => handleClickIncorrect()

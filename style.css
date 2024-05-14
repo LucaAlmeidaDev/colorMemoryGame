@@ -14,11 +14,29 @@
     --blue: #3B7AC9;    
     --blue-highlight: #A0C9FC;
 }
-@media only screen and (max-width: 680px){
-    nav .logo{
+@media only screen and (max-width: 1000px){
+    #gameContainer{
+        margin: 0 0 0px 0px;
+    }
+}
+@media only screen and (max-width: 600px){
+    #hero-container{
+        display: flex;
+        flex-direction: column;
+    }
+}
+@media only screen and (max-width: 600px){
+    #text-container{
+        display: flex;
+        flex-direction: row;
+        gap: 140px;
+        margin: 10px 0 20px 50px;
+    }
+    #logo{
         font-size: 30px;
     }
 }
+
 *{
     padding:0;
     margin: 0;
@@ -34,7 +52,7 @@ body{
     transition: all 0.6s ease;
 }
 nav{
-    display: flex;      
+    display: flex;
     margin: 2.5rem;
     text-align: center;
     justify-content: space-between;
