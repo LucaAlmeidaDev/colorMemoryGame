@@ -6,14 +6,14 @@
 <p align="center"><img src="https://github.com/LucaAlmeidaDev/Assets/blob/Main/Assets/colorMemoryGame2.png"/></p>
 <p align="center"><img src="https://github.com/LucaAlmeidaDev/Assets/blob/Main/Assets/colorMemoryGame3.png"/></p>
 
-<h2 align='center'>Tecnologias Utilizadas</h2>
+<h2 align='center'>Utilized Languages & Frameworks</h2>
 <div align='center'>
   <img width="50px" height="50px" src="https://github.com/tandpfun/skill-icons/blob/main/icons/HTML.svg"/>
   <img width="50px" height="50px" src="https://github.com/tandpfun/skill-icons/blob/main/icons/JavaScript.svg"/>
   <img width="50px" height="50px" src="https://github.com/tandpfun/skill-icons/blob/main/icons/CSS.svg"/>
 </div>
 
-<h2 align='center'>Autor</h2>
+<h2 align='center'>Author</h2>
 <p align='center'>Lucas Vinicius De Almeida Lima (Almas) | Programador Fullstack.</p>
 <div align='center'>
   <a href="https://www.linkedin.com/in/lucas-almeida-52b64522b" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a>
